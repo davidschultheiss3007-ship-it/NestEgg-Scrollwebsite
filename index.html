@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NestEgg · Finanzroutinen statt Finanzstress</title>
+  <meta name="description" content="Scrollbasierte Premium-FinTech-Landingpage für den NestEgg Businessplan." />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script defer src="script.js"></script>
+</head>
+
+<body class="intro-locked">
+  <div class="noise"></div>
+  <div class="scroll-progress"><span id="scrollProgress"></span></div>
+
+  <section id="intro" class="intro-screen" aria-label="NestEgg Start">
+    <div class="intro-bg">
+      <span class="orb orb-a"></span>
+      <span class="orb orb-b"></span>
+      <span class="orb orb-c"></span>
+    </div>
+
+    <div class="intro-shell">
+      <div class="brand-mark">
+        <span class="logo-egg"></span>
+        <span>NestEgg</span>
+      </div>
+
+      <div class="intro-grid">
+        <div class="intro-copy">
+          <p class="eyebrow">Businessplan · Premium FinTech Scrollytelling</p>
+          <h1>Finanzroutinen statt Finanzstress.</h1>
+          <p>
+            Ein KI-Sparcoach, der junge Menschen nicht mit Finanzwissen überlädt,
+            sondern kleine Entscheidungen im Alltag in echte Routinen verwandelt.
+          </p>
+          <div class="intro-actions">
+            <button class="btn btn-primary" id="enterExperience">Demo starten</button>
+            <button class="btn btn-ghost open-plan">Businessplan ansehen</button>
+          </div>
+        </div>
+
+        <div class="intro-card">
+          <div class="metric-ring">
+            <svg viewBox="0 0 120 120" aria-hidden="true">
+              <circle cx="60" cy="60" r="48"></circle>
+              <circle class="ring-fill" cx="60" cy="60" r="48"></circle>
+            </svg>
+            <strong>185 €</strong>
+            <span>Notgroschen</span>
+          </div>
+          <div class="intro-stack">
+            <span>+11 € diese Woche</span>
+            <span>15 % Sparquote</span>
+            <span>Partner-Investment später</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <aside class="side-nav" aria-label="Abschnittsnavigation">
+    <a href="#hero" class="side-brand" aria-label="NestEgg Home">
+      <span class="logo-egg"></span>
+      <span>NestEgg</span>
+    </a>
+    <nav id="sectionNav">
+      <a href="#hero" data-section="hero"><b>01</b><span>Hero</span></a>
+      <a href="#problem" data-section="problem"><b>02</b><span>Problem</span></a>
+      <a href="#solution" data-section="solution"><b>03</b><span>Lösung</span></a>
+      <a href="#product" data-section="product"><b>04</b><span>Produkt</span></a>
+      <a href="#market" data-section="market"><b>05</b><span>Markt</span></a>
+      <a href="#business" data-section="business"><b>06</b><span>Business Model</span></a>
+      <a href="#competition" data-section="competition"><b>07</b><span>Wettbewerb</span></a>
+      <a href="#trust" data-section="trust"><b>08</b><span>Vertrauen</span></a>
+      <a href="#financials" data-section="financials"><b>09</b><span>Finanzen</span></a>
+      <a href="#roadmap" data-section="roadmap"><b>10</b><span>Roadmap</span></a>
+      <a href="#depth" data-section="depth"><b>11</b><span>Tiefe</span></a>
+      <a href="#final" data-section="final"><b>12</b><span>Abschluss</span></a>
+    </nav>
+
+    <div class="mini-map" id="miniMap" aria-hidden="true"></div>
+    <button class="nav-btn open-plan">Businessplan</button>
+  </aside>
+
+  <header class="top-bar">
+    <button class="mobile-menu" id="mobileMenu" aria-label="Navigation öffnen">☰</button>
+    <div class="top-progress">
+      <span>Fortschritt</span>
+      <div><i id="topProgress"></i></div>
+    </div>
+    <button class="command-trigger" id="commandTrigger"><kbd>⌘</kbd><kbd>K</kbd> Suche oder Befehl eingeben</button>
+    <button class="trust-badge" data-scroll="#trust">DSGVO-konform</button>
+  </header>
+
+  <main id="page">
+    <section id="hero" class="section hero-section" data-label="Hero">
+      <div class="section-bg hero-glow"></div>
+      <div class="content-grid hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Coach-first · Investment-partner-later</p>
+          <h1>Finanzroutinen statt <span>Finanzstress.</span></h1>
+          <p class="lead">
+            NestEgg hilft jungen Menschen, kleine Sparentscheidungen im Alltag wirklich umzusetzen –
+            mit KI-Coaching, klaren Zielen und einem Einstieg, der sich nicht wie Finanzunterricht anfühlt.
+          </p>
+          <div class="hero-actions">
+            <button class="btn btn-primary" id="replayDemo">Demo abspielen</button>
+            <button class="btn btn-secondary open-plan">Businessplan ansehen</button>
+          </div>
+
+          <div class="trust-row">
+            <article><strong>Ohne App-Zwang</strong><span>Start direkt über Chat/Web.</span></article>
+            <article><strong>Nur mit Zustimmung</strong><span>Open Banking kontrolliert.</span></article>
+            <article><strong>Regulierte Partner</strong><span>Investments nicht im MVP.</span></article>
+            <article><strong>18–35 Fokus</strong><span>Studium, Ausbildung, Berufseinstieg.</span></article>
+          </div>
+        </div>
+
+        <div class="hero-demo reveal delay-1">
+          <div class="chat-panel">
+            <div class="chat-head">
+              <span class="logo-egg"></span>
+              <div><strong>NestEgg Coach</strong><small>Online</small></div>
+              <button>•••</button>
+            </div>
+            <div class="chat-body" id="chatBody">
+              <div class="msg bot">Du hast diese Woche 11 € weniger für Lieferdienste ausgegeben. Soll ich 5 € davon in dein Notgroschen-Ziel legen?</div>
+              <div class="msg user">Ja.</div>
+              <div class="msg bot">Erledigt. Dein Notgroschen wächst auf 185 €. Noch 315 € bis zu deinem ersten Ziel.</div>
+            </div>
+            <div class="chat-input">Nachricht an NestEgg… <span>➜</span></div>
+          </div>
+
+          <div class="floating-widget widget-a">
+            <span>Notgroschen</span><strong>185 €</strong><small>von 500 €</small>
+          </div>
+          <div class="floating-widget widget-b">
+            <span>Diese Woche</span><strong>+11 €</strong><small>gespart</small>
+          </div>
+          <div class="floating-widget widget-c">
+            <span>Sparquote</span><strong>15 %</strong><small>+3 % vs. Vorwoche</small>
+          </div>
+        </div>
+      </div>
+      <a class="scroll-cue" href="#problem">Scrollen, um mehr zu entdecken <span>↓</span></a>
+    </section>
+
+    <section id="problem" class="section" data-label="Problem">
+      <div class="section-kicker">02 · Problem</div>
+      <div class="content-grid two-col">
+        <div class="section-copy sticky-copy reveal">
+          <p class="eyebrow">Verhaltensproblem statt Informationsproblem</p>
+          <h2>Junge Menschen wollen sparen – aber der Alltag gewinnt zu oft.</h2>
+          <p>Zwischen guten Vorsätzen und echtem Verhalten liegen spontane Ausgaben, unklare Ziele, zu viele Finanzinformationen und zu wenig Routine.</p>
+        </div>
+        <div class="card-grid problem-grid">
+          <article class="glass-card reveal"><span class="icon">🛍</span><h3>Impulsausgaben statt Finanzroutine</h3><p>Kleine Beträge verschwinden im Alltag, ohne dass ein Plan sichtbar wird.</p></article>
+          <article class="glass-card reveal"><span class="icon">▦</span><h3>Finanz-Apps wirken kompliziert</h3><p>Zu viele Funktionen, zu wenig Orientierung. Motivation geht verloren.</p></article>
+          <article class="glass-card reveal"><span class="icon">↗</span><h3>ETF-Sparen startet oft zu spät</h3><p>Wertvolle Jahre und Zinseszinseffekte bleiben ungenutzt.</p></article>
+          <article class="glass-card reveal"><span class="icon">◇</span><h3>Klassische Beratung passt nicht</h3><p>Für kleine Vermögen oft zu teuer, zu formell und zu wenig digital.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="solution" class="section flow-section" data-label="Lösung">
+      <div class="section-kicker">03 · Lösung</div>
+      <div class="center-copy reveal">
+        <p class="eyebrow">Vom Finanzdatum zur Handlung</p>
+        <h2>NestEgg macht aus Finanzdaten konkrete nächste Schritte.</h2>
+      </div>
+      <div class="flow-line">
+        <article class="flow-step reveal"><b>01</b><span>🎯</span><h3>Ziel wählen</h3><p>Notgroschen, Urlaub oder ETF-Start.</p></article>
+        <article class="flow-step reveal"><b>02</b><span>🔎</span><h3>Ausgaben verstehen</h3><p>Open-Banking-Analyse nur mit Einwilligung.</p></article>
+        <article class="flow-step reveal"><b>03</b><span>⚡</span><h3>Sparimpuls erhalten</h3><p>KI erkennt kleine realistische Sparfenster.</p></article>
+        <article class="flow-step reveal"><b>04</b><span>✓</span><h3>Betrag bestätigen</h3><p>Der Nutzer entscheidet immer selbst.</p></article>
+        <article class="flow-step reveal"><b>05</b><span>▥</span><h3>Fortschritt sehen</h3><p>Ziele werden sichtbar und motivierend.</p></article>
+        <article class="flow-step reveal"><b>06</b><span>↗</span><h3>Partner investieren</h3><p>Später über regulierte Partner.</p></article>
+      </div>
+    </section>
+
+    <section id="product" class="section product-section" data-label="Produkt">
+      <div class="section-kicker">04 · Produktdemo</div>
+      <div class="content-grid product-grid">
+        <div class="section-copy reveal">
+          <p class="eyebrow">Sparcoach im Alltag</p>
+          <h2>Der erste Mehrwert entsteht innerhalb weniger Minuten.</h2>
+          <ul class="check-list">
+            <li>Persönliche Gespräche statt Excel-Pflege</li>
+            <li>Ausgabenanalyse mit klaren Sparfenstern</li>
+            <li>Einfache Bestätigung kleiner Beträge</li>
+            <li>Fortschritt sichtbar und motivierend</li>
+          </ul>
+        </div>
+
+        <div class="phone-shell reveal">
+          <div class="phone-top"></div>
+          <div class="mini-chat">
+            <div class="msg bot">Diese Woche 11 € weniger Lieferdienste. 5 € in Notgroschen legen?</div>
+            <div class="msg user">Ja.</div>
+            <div class="msg bot">Erledigt. Noch 315 € bis zum ersten Ziel.</div>
+          </div>
+        </div>
+
+        <div class="dashboard-stack reveal">
+          <article class="glass-card big-number"><span>Dein Ziel</span><strong>185 €</strong><small>37 % von 500 € erreicht</small></article>
+          <article class="glass-card"><h3>Ausgaben-Analyse</h3><div class="expense-row"><span>Lieferdienste</span><b>-11 €</b></div><div class="expense-row"><span>Kaffee</span><b>-6 €</b></div><div class="expense-row"><span>ÖPNV</span><b>-3 €</b></div></article>
+          <article class="glass-card"><h3>Insight der Woche</h3><p>Du gibst 19 % weniger für Lieferdienste aus als in der Vorwoche. Stark.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="market" class="section" data-label="Markt">
+      <div class="section-kicker">05 · Markt</div>
+      <div class="center-copy reveal">
+        <p class="eyebrow">Timing</p>
+        <h2>Ein Markt, in dem mehrere Trends zusammenlaufen.</h2>
+      </div>
+      <div class="trend-grid">
+        <article class="glass-card reveal"><h3>Gen Z will finanzielle Selbstständigkeit</h3><p>Finanzielle Eigenverantwortung wird früher relevant.</p></article>
+        <article class="glass-card reveal"><h3>Messenger sind Infrastruktur</h3><p>Der Einstieg findet dort statt, wo Alltag ohnehin passiert.</p></article>
+        <article class="glass-card reveal"><h3>ETF-Sparen & Open Banking wachsen</h3><p>Datenzugang und günstige Anlageinfrastruktur werden massentauglich.</p></article>
+        <article class="glass-card reveal"><h3>KI vereinfacht Finanzsoftware</h3><p>Komplexe Entscheidungen werden in einfache Dialoge übersetzt.</p></article>
+      </div>
+
+      <div class="visual-grid">
+        <article class="chart-card reveal">
+          <h3>Marktpotenzial</h3>
+          <div class="rings">
+            <div class="ring ring-1">TAM<br><b>65 Mrd. €</b></div>
+            <div class="ring ring-2">SAM<br><b>18 Mrd. €</b></div>
+            <div class="ring ring-3">SOM<br><b>1,2 Mrd. €</b></div>
+          </div>
+        </article>
+        <article class="chart-card reveal"><h3>Wachstumstreiber</h3><canvas id="marketChart"></canvas></article>
+        <article class="chart-card reveal">
+          <h3>Zielgruppe</h3>
+          <div class="segment"><span>18–22 Studierende</span><b>35%</b></div>
+          <div class="segment"><span>23–27 Berufseinsteiger</span><b>45%</b></div>
+          <div class="segment"><span>28–35 Young Professionals</span><b>20%</b></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="business" class="section" data-label="Business Model">
+      <div class="section-kicker">06 · Geschäftsmodell</div>
+      <div class="content-grid two-col">
+        <div class="section-copy reveal">
+          <p class="eyebrow">Robuster als reine AuM-Gebühren</p>
+          <h2>Nicht nur AuM. Ein robuster Mehrkanal-Umsatz.</h2>
+          <p>Premium, B2B2C, Partner-Revenue und White-Label schaffen frühere, planbarere Erlöse.</p>
+          <div class="tab-row">
+            <button class="model-tab active" data-model="b2c">B2C</button>
+            <button class="model-tab" data-model="b2b">B2B2C</button>
+            <button class="model-tab" data-model="partner">Partner</button>
+          </div>
+          <div class="model-detail" id="modelDetail"></div>
+        </div>
+        <div class="revenue-grid">
+          <article class="glass-card reveal"><h3>Premium-Abo</h3><strong>4,99 €</strong><p>Erweiterte Insights und Ziele.</p></article>
+          <article class="glass-card reveal"><h3>B2B2C-Lizenzen</h3><strong>1–3 €</strong><p>Aktiver Nutzer pro Monat.</p></article>
+          <article class="glass-card reveal"><h3>Partner-Revenue</h3><strong>Share</strong><p>Leads und Produktanbindung.</p></article>
+          <article class="glass-card reveal"><h3>White-Label</h3><strong>Setup</strong><p>Plattform unter Partnermarke.</p></article>
+        </div>
+      </div>
+      <div class="unit-strip reveal">
+        <div><span>CAC</span><b>18 €</b></div>
+        <div><span>LTV</span><b>126 €</b></div>
+        <div><span>LTV/CAC</span><b>7,0x</b></div>
+        <div><span>Beitragsmarge</span><b>&gt;70 %</b></div>
+        <div><span>Break-even</span><b>Jahr 4/5</b></div>
+      </div>
+    </section>
+
+    <section id="competition" class="section" data-label="Wettbewerb">
+      <div class="section-kicker">07 · Wettbewerb</div>
+      <div class="center-copy reveal">
+        <p class="eyebrow">Differenzierung</p>
+        <h2>Coach-first und alltagsnah. Nicht nur Funktionen.</h2>
+      </div>
+      <div class="comparison reveal">
+        <table>
+          <thead><tr><th>Kriterium</th><th>NestEgg</th><th>Neobroker</th><th>Banken-Apps</th><th>Budgeting-Apps</th><th>Robo-Advisor</th></tr></thead>
+          <tbody>
+            <tr><td>Fokus</td><td class="win">KI-Sparcoach & Routinen</td><td>Handel</td><td>Verwaltung</td><td>Tracking</td><td>Anlageautomation</td></tr>
+            <tr><td>Nutzererlebnis</td><td class="win">Conversational & einfach</td><td>Komplex</td><td>Funktional</td><td>Manuell</td><td>Formell</td></tr>
+            <tr><td>Alltagsnutzen</td><td class="win">Sehr hoch</td><td>Niedrig</td><td>Mittel</td><td>Mittel</td><td>Mittel</td></tr>
+            <tr><td>Investieren</td><td class="win">Über regulierte Partner</td><td>Ja</td><td>Begrenzt</td><td>Nein</td><td>Ja</td></tr>
+            <tr><td>Positionierung</td><td class="stars">★★★★★</td><td>★★★☆☆</td><td>★★★☆☆</td><td>★★☆☆☆</td><td>★★★☆☆</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="trust" class="section trust-section" data-label="Vertrauen">
+      <div class="section-kicker">08 · Compliance</div>
+      <div class="content-grid trust-grid">
+        <div class="section-copy reveal">
+          <p class="eyebrow">Klare regulatorische Grenze</p>
+          <h2>Finanzvertrauen entsteht durch klare Grenzen.</h2>
+          <p>NestEgg startet als Finanzcoach. Investments laufen nur über regulierte Partner. Nutzer behalten Kontrolle über Daten, Entscheidungen und Ziele.</p>
+        </div>
+        <div class="layer-stack reveal">
+          <div>Coaching Layer <span>KI-Coach & Sparroutinen</span></div>
+          <div>Open-Banking Layer <span>Datenzugriff nur mit Zustimmung</span></div>
+          <div>Investment Layer <span>Produkte über regulierte Partner</span></div>
+          <div>Audit & Governance <span>Compliance, Sicherheit, Transparenz</span></div>
+        </div>
+        <div class="trust-list reveal">
+          <article>Kein Investment-Advice im MVP</article>
+          <article>Keine Orders ohne regulierten Partner</article>
+          <article>Open Banking nur mit Zustimmung</article>
+          <article>KI-Guardrails & Datenschutz</article>
+          <article>DSGVO und Privacy by Design</article>
+        </div>
+      </div>
+    </section>
+
+    <section id="financials" class="section" data-label="Finanzen">
+      <div class="section-kicker">09 · Finanzplanung</div>
+      <div class="center-copy reveal">
+        <p class="eyebrow">Realistische Skalierung</p>
+        <h2>Realistische Skalierung statt künstlicher Frühprofitabilität.</h2>
+      </div>
+      <div class="kpi-row">
+        <article class="stat-card reveal"><span>Kapitalbedarf</span><strong data-counter="950000">0</strong><small>€ bis Ende Jahr 2</small></article>
+        <article class="stat-card reveal"><span>Break-even</span><strong>Jahr 4/5</strong><small>operativ erwartet</small></article>
+        <article class="stat-card reveal"><span>Umsatz Jahr 5</span><strong>7,4 Mio. €</strong><small>Planumsatz</small></article>
+        <article class="stat-card reveal"><span>EBITDA Jahr 5</span><strong>1,49 Mio. €</strong><small>20 % Marge</small></article>
+        <article class="stat-card reveal"><span>FTE Jahr 5</span><strong>45</strong><small>skalierendes Team</small></article>
+      </div>
+      <div class="visual-grid">
+        <article class="chart-card reveal"><h3>Umsatz & EBITDA</h3><canvas id="financeChart"></canvas></article>
+        <article class="chart-card reveal"><h3>Mittelverwendung</h3><canvas id="fundingChart"></canvas></article>
+      </div>
+    </section>
+
+    <section id="roadmap" class="section roadmap-section" data-label="Roadmap">
+      <div class="section-kicker">10 · Roadmap</div>
+      <div class="center-copy reveal">
+        <p class="eyebrow">Fünfjahreslogik</p>
+        <h2>Klare Schritte. Nachhaltige Wirkung.</h2>
+      </div>
+      <div class="timeline">
+        <article class="timeline-item reveal"><b>M1–3</b><h3>Validierung</h3><p>Problem-Solution Fit, Nutzerinterviews, Prototyping.</p></article>
+        <article class="timeline-item reveal"><b>M4–9</b><h3>MVP</h3><p>Kernfunktionen, Pilot-Nutzer, Feedback-Loops.</p></article>
+        <article class="timeline-item reveal"><b>M10–18</b><h3>Premium & B2B-Piloten</h3><p>Premium-Features und erste B2B2C-Partner.</p></article>
+        <article class="timeline-item reveal"><b>M19–30</b><h3>Partner-Investment</h3><p>Integration regulierter Partner.</p></article>
+        <article class="timeline-item reveal"><b>M31–48</b><h3>Skalierung</h3><p>Deutschlandweit skalieren, Prozesse stärken.</p></article>
+        <article class="timeline-item reveal"><b>M49–60</b><h3>DACH & White-Label</h3><p>Expansion und White-Label-Skalierung.</p></article>
+      </div>
+    </section>
+
+    <section id="depth" class="section" data-label="Tiefe">
+      <div class="section-kicker">11 · Tiefe</div>
+      <div class="content-grid depth-grid">
+        <article class="glass-card reveal">
+          <h3>Personas</h3>
+          <div class="tab-row persona-tabs">
+            <button class="persona-tab active" data-persona="lena">Lena</button>
+            <button class="persona-tab" data-persona="max">Max</button>
+            <button class="persona-tab" data-persona="sara">Sara</button>
+          </div>
+          <div id="personaDetail" class="persona-detail"></div>
+        </article>
+        <article class="glass-card reveal">
+          <h3>SWOT</h3>
+          <div class="swot">
+            <div><b>Stärken</b><span>Coach-first, Routine, B2B2C</span></div>
+            <div><b>Schwächen</b><span>Neue Marke, Partnerabhängigkeit</span></div>
+            <div><b>Chancen</b><span>Open Banking, KI-Adoption, DACH</span></div>
+            <div><b>Risiken</b><span>Regulierung, Vertrauen, CAC</span></div>
+          </div>
+        </article>
+        <article class="glass-card reveal">
+          <h3>Risiko-Heatmap</h3>
+          <div class="heatmap">
+            <span></span><span></span><span class="hot"></span>
+            <span></span><span class="warm"></span><span class="hot"></span>
+            <span class="cool"></span><span class="warm"></span><span></span>
+          </div>
+        </article>
+        <article class="glass-card reveal">
+          <h3>Live-Kennzahlen MVP</h3>
+          <div class="metric-list">
+            <div><span>Aktive Nutzer</span><b>2.341 +12%</b></div>
+            <div><span>Sparimpulse</span><b>8.742 +18%</b></div>
+            <div><span>Bestätigte Impulse</span><b>3.182 +22%</b></div>
+            <div><span>Sparquote Ø</span><b>15% +3 p.p.</b></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="final" class="section final-section" data-label="Abschluss">
+      <div class="final-glow"></div>
+      <div class="final-content reveal">
+        <p class="eyebrow">One-Sentence Pitch</p>
+        <h2>NestEgg ist kein weiterer Broker. <span>NestEgg ist der Einstieg davor.</span></h2>
+        <p>Die Idee verbindet Kundennutzen, Marktpotenzial, Innovation, Regulierung, Finanzierung und Skalierung in einem realistischen Gründungsszenario.</p>
+        <div class="hero-actions">
+          <button class="btn btn-primary open-plan">Businessplan prüfen</button>
+          <button class="btn btn-secondary" data-scroll="#hero">Zur Demo</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="planDrawer" class="plan-drawer">
+    <button class="drawer-close" id="closePlan">×</button>
+    <h2>NestEgg Businessplan</h2>
+    <p>Coach-first, investment-partner-later: Finanzroutinen, Open-Banking-Analyse und späterer Investmentpfad über regulierte Partner.</p>
+    <div class="drawer-grid">
+      <article><b>Kapitalbedarf</b><span>950.000 €</span></article>
+      <article><b>Break-even</b><span>Jahr 4/5</span></article>
+      <article><b>Umsatz Jahr 5</b><span>7,4 Mio. €</span></article>
+      <article><b>EBITDA Jahr 5</b><span>1,49 Mio. €</span></article>
+    </div>
+    <h3>Kernargument</h3>
+    <p>NestEgg löst kein reines Informationsproblem, sondern ein Verhaltensproblem: aus guten Sparvorsätzen werden kleine konkrete Routinen.</p>
+  </dialog>
+
+  <div class="command-palette" id="commandPalette" aria-hidden="true">
+    <div class="command-box">
+      <input id="commandInput" placeholder="Springe zu Markt, Finanzen, Roadmap…" />
+      <div id="commandResults"></div>
+    </div>
+  </div>
+</body>
+</html>
